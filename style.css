@@ -1,159 +1,169 @@
-:root {
+:root{
   --bg: #7cc8e6;
   --ink: #0c1b2a;
-  --panel: rgba(255, 255, 255, 0.18);
-  --btn: rgba(255, 255, 255, 0.88);
-  --stroke: rgba(255, 255, 255, 0.35);
+  --panel: rgba(255,255,255,0.18);
+  --btn: rgba(255,255,255,0.92);
+  --stroke: rgba(255,255,255,0.35);
+  --accent: rgba(255,107,107,0.55);
 }
 
-* {
-  box_sizing: border_box;
-}
+*{ box-sizing: border-box; }
 
-body {
+body{
   margin: 0;
-  font_family: system_ui, -apple_system, Segoe UI, Roboto, Arial, sans_serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--ink);
 }
 
-.page {
-  min_height: 100vh;
+.page{
+  min-height: 100vh;
   display: flex;
-  justify_content: center;
+  justify-content: center;
   padding: 22px 14px 40px;
 }
 
-.shell {
+.shell{
   width: 100%;
-  max_width: 520px;
-  background: transparent;
+  max-width: 560px;
 }
 
-.top {
+.top{
   display: flex;
-  flex_direction: column;
-  align_items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
-  padding_top: 10px;
+  padding-top: 10px;
 }
 
-.avatar {
+.avatar{
   width: 92px;
   height: 92px;
-  border_radius: 999px;
-  background: rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.75);
   border: 1px solid var(--stroke);
   display: flex;
-  align_items: center;
-  justify_content: center;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-.avatar img {
+.avatar img{
   width: 92%;
   height: 92%;
-  object_fit: contain;
+  object-fit: contain;
 }
 
-.title {
+.title{
   margin: 0;
-  font_size: 30px;
-  font_weight: 800;
-  text_align: center;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
 }
 
-.sec {
+.rocket{
+  font-size: 20px;
+}
+
+.sec{
   margin: 22px 0 10px;
-  text_align: center;
-  font_size: 15px;
-  font_weight: 800;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
 }
 
-.carousel {
+.carousel{
   display: grid;
-  grid_template_columns: 42px 1fr 42px;
+  grid-template-columns: 42px 1fr 42px;
   gap: 10px;
-  align_items: center;
+  align-items: center;
   background: var(--panel);
   border: 1px solid var(--stroke);
-  border_radius: 16px;
+  border-radius: 16px;
   padding: 10px;
 }
 
-.nav {
+.nav{
   width: 42px;
   height: 42px;
-  border_radius: 999px;
+  border-radius: 999px;
   border: 0;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255,255,255,0.7);
   cursor: pointer;
-  font_size: 26px;
+  font-size: 26px;
+  line-height: 1;
 }
 
-.rail {
+.rail{
   display: flex;
-  gap: 12px;
-  overflow_x: auto;
-  scroll_behavior: smooth;
-  padding: 4px 2px;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 6px 2px;
 }
 
-.rail::-webkit_scrollbar {
-  height: 8px;
-}
+.rail::-webkit-scrollbar{ height: 8px; }
+.rail::-webkit-scrollbar-thumb{ background: rgba(0,0,0,0.12); border-radius: 999px; }
 
-.rail::-webkit_scrollbar_thumb {
-  background: rgba(0, 0, 0, 0.12);
-  border_radius: 999px;
-}
-
-.card {
-  min_width: 210px;
-  text_decoration: none;
+.team_card{
+  min-width: 210px;
+  text-decoration: none;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border_radius: 16px;
+  background: rgba(255,255,255,0.30);
+  border-radius: 18px;
+  border: 2px solid var(--accent);
+  padding: 12px;
 }
 
-.card_body {
-  padding: 16px 14px;
+.team_art{
+  width: 100%;
+  height: 150px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.55);
   display: flex;
-  justify_content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.card_title {
-  font_weight: 800;
-  text_align: center;
+.team_art img{
+  width: 92%;
+  height: 92%;
+  object-fit: contain;
 }
 
-.list {
+.team_label{
+  margin-top: 10px;
+  background: rgba(255,255,255,0.78);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 800;
+}
+
+.list{
   display: flex;
-  flex_direction: column;
+  flex-direction: column;
   gap: 12px;
 }
 
-.btn {
+.btn{
   display: block;
-  text_align: center;
+  text-align: center;
   padding: 15px 14px;
-  border_radius: 999px;
+  border-radius: 999px;
   background: var(--btn);
   color: var(--ink);
-  text_decoration: none;
-  font_weight: 800;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  font-weight: 800;
+  border: 3px solid var(--accent);
 }
 
-.btn:hover {
-  filter: brightness(0.98);
-}
+.btn:hover{ filter: brightness(0.98); }
 
-.foot {
-  margin_top: 18px;
-  text_align: center;
+.foot{
+  margin-top: 18px;
+  text-align: center;
   opacity: 0.7;
-  font_size: 13px;
-  font_weight: 700;
+  font-size: 13px;
+  font-weight: 700;
 }
